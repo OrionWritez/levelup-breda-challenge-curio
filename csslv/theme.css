@@ -1,0 +1,85 @@
+nav {
+    gap: clamp(12px, 3vw, 36px);
+}
+
+.theme-toggle {
+    border: 1px solid #39ff14;
+    border-radius: 4px;
+    padding: 9px 14px;
+    background: transparent;
+    color: #eeeeee;
+    cursor: pointer;
+    font: inherit;
+    white-space: nowrap;
+}
+
+.theme-toggle:hover {
+    background: #39ff14;
+    color: #151719;
+    box-shadow: 0 0 12px #39ff14;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #39ff14;
+    outline-offset: 3px;
+}
+
+body[data-theme="light"] {
+    background: #f4f6f8;
+    color: #20242a;
+    color-scheme: light;
+}
+
+body[data-theme="light"] header,
+body[data-theme="light"] .product-card,
+body[data-theme="light"] .newsletter-dialog {
+    background: #ffffff;
+}
+
+body[data-theme="light"] nav a,
+body[data-theme="light"] .theme-toggle,
+body[data-theme="light"] .newsletter-link,
+body[data-theme="light"] .newsletter-button,
+body[data-theme="light"] .dialog-close,
+body[data-theme="light"] .product-category-button {
+    color: #20242a;
+}
+
+body[data-theme="light"] .product-category-button[aria-pressed="true"] {
+    color: #151719;
+}
+
+body[data-theme="light"] .hero h1,
+body[data-theme="light"] .hero h2,
+body[data-theme="light"] .product-category h2,
+body[data-theme="light"] .product-info h3,
+body[data-theme="light"] .newsletter-dialog h2,
+body[data-theme="light"] .location-heading h2 {
+    color: #20242a;
+    text-shadow: none;
+}
+
+body[data-theme="light"] .newsletter-dialog {
+    color: #20242a;
+}
+
+body[data-theme="light"] .newsletter-dialog input {
+    background: #f4f6f8;
+    color: #20242a;
+}
+
+body[data-theme="light"] .product-search input {
+    background: #ffffff;
+    color: #20242a;
+}
+
+body[data-theme="light"] .newsletter-dialog::backdrop {
+    background: rgba(25, 32, 40, 0.45);
+}
+
+@media (max-width: 700px) {
+    .theme-toggle {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+}
